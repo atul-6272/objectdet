@@ -21,10 +21,9 @@ def load_image_into_numpy_array(image):
 
 def object_detection_funct(image_path, api_call=True, video_file=False):
     #initialize model graph path and labels map path
-    path_name = '../ssd_mobilenet_v1_coco_2017_11_17'
+    path_name = 'model'
     path_to_frozen_det_graph = path_name + '/frozen_inference_graph.pb'
-    path_to_labels = os.path.join('../models-master/research/object_detection/data', 
-                                  'mscoco_label_map.pbtxt')
+    path_to_labels = os.path.join('model', 'mscoco_label_map.pbtxt')
     num_of_classes = 90
     
     #load the frozen tensorflow model
